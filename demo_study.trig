@@ -1,0 +1,44 @@
+# This is the demo for RDF/TRiG to be recorded.
+
+@prefit pid: <http://epic3.storage.surfsara.nl:8001/846/> .
+@prefix pre: <http://www.example.org/vocabulary#> .
+@prefix : <http://www.example.org/exampleDocument#> .
+@prefix ced: <http://www.example.org/exampleDocument#> .
+
+:G1 { :cellline_demo pre:has_ced ced:CACO2, ced:HCT116, ced:HT29, ced:PC346C, ced:SW480, ced:VCaP ;
+					 pre:study_ega_loc 'EGAXXXXXXX';
+					 pre:study_surfsara_loc pid:1234567.
+	  ced:CACO2 pre:exp_type 'RNA_seq';
+	  			pre:patient_id '123456';
+	  			pre:ced_ega_loc 'EAGXXXXX';
+	  			pre:ced_surfsara_loc pid:1234567;
+	  			pre:file_ced_loc 'EGAXXXXX';
+	  			pre:file_surfsara_loc pid:1234567. 
+	 ced:HCT116 pre:exp_type 'RNA_seq';
+	  			pre:patient_id '123456';
+	  			pre:ced_ega_loc 'EAGXXXXX';
+	  			pre:ced_surfsara_loc pid:1234567;
+	  			pre:file_ced_loc 'EGAXXXXX';
+	  			pre:file_surfsara_loc pid:1234567. 
+	  ced:HT29  pre:exp_type 'RNA_seq';
+	  		    pre:patient_id '123456';
+	  		    pre:ced_ega_loc 'EAGXXXXX';
+	  		    pre:ced_surfsara_loc pid:1234567;
+	            pre:file_ced_loc 'EGAXXXXX';
+	  		    pre:file_surfsara_loc pid:1234567. 
+	 ced:PC346C pre:exp_type 'RNA_seq';
+	  			pre:patient_id '123456';
+	  			pre:ced_surfsara_loc pid:1234567;
+	  			pre:file_surfsara_loc pid:1234567. 
+	  ced:SW480 pre:exp_type 'RNA_seq';
+	  			pre:patient_id '123456';
+	  			pre:ced_ega_loc 'EAGXXXXX';
+	  			pre:ced_surfsara_loc pid:1234567;
+	  			pre:file_ced_loc 'EGAXXXXX';
+	  			pre:file_surfsara_loc pid:1234567. 
+	  ced:VCaP  pre:exp_type 'RNA_seq';
+	  			pre:patient_id '123456';
+	  			pre:ced_ega_loc 'EAGXXXXX';
+	  			pre:ced_surfsara_loc pid:1234567;
+	  			pre:file_ced_loc 'EGAXXXXX';
+	  			pre:file_surfsara_loc pid:1234567.  }
