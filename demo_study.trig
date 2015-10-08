@@ -1,44 +1,63 @@
-# This is the demo for RDF/TRiG to be recorded.
+@prefix ced: <http://www.example.org/ced#> .
+@prefix ega: <http://www.example.org/ega#> .
+@prefix exp: <http://www.example.org/experiment#> .
+@prefix patient: <http://www.example.org/patient#> .
+@prefix pid: <http://epic3.storage.surfsara.nl:8001/846/> .
+@prefix pred: <http://www.example.org/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix study: <http://www.example.org/study#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-@prefit pid: <http://epic3.storage.surfsara.nl:8001/846/> .
-@prefix pre: <http://www.example.org/vocabulary#> .
-@prefix : <http://www.example.org/exampleDocument#> .
-@prefix ced: <http://www.example.org/exampleDocument#> .
+_:N5f3ee45b6f384cacb971866b0c260721 {
+    study:cellline_demo pred:has_ced ced:CACO2,
+            ced:HCT116,
+            ced:HT29,
+            ced:PC346C,
+            ced:SW480,
+            ced:VCaP ;
+        pred:study_ega_loc "EGA1"^^ega:study ;
+        pred:study_surfsara_loc pid:id1 .
 
-:G1 { :cellline_demo pre:has_ced ced:CACO2, ced:HCT116, ced:HT29, ced:PC346C, ced:SW480, ced:VCaP ;
-					 pre:study_ega_loc 'EGAXXXXXXX';
-					 pre:study_surfsara_loc pid:1234567.
-	  ced:CACO2 pre:exp_type 'RNA_seq';
-	  			pre:patient_id '123456';
-	  			pre:ced_ega_loc 'EAGXXXXX';
-	  			pre:ced_surfsara_loc pid:1234567;
-	  			pre:file_ced_loc 'EGAXXXXX';
-	  			pre:file_surfsara_loc pid:1234567. 
-	 ced:HCT116 pre:exp_type 'RNA_seq';
-	  			pre:patient_id '123456';
-	  			pre:ced_ega_loc 'EAGXXXXX';
-	  			pre:ced_surfsara_loc pid:1234567;
-	  			pre:file_ced_loc 'EGAXXXXX';
-	  			pre:file_surfsara_loc pid:1234567. 
-	  ced:HT29  pre:exp_type 'RNA_seq';
-	  		    pre:patient_id '123456';
-	  		    pre:ced_ega_loc 'EAGXXXXX';
-	  		    pre:ced_surfsara_loc pid:1234567;
-	            pre:file_ced_loc 'EGAXXXXX';
-	  		    pre:file_surfsara_loc pid:1234567. 
-	 ced:PC346C pre:exp_type 'RNA_seq';
-	  			pre:patient_id '123456';
-	  			pre:ced_surfsara_loc pid:1234567;
-	  			pre:file_surfsara_loc pid:1234567. 
-	  ced:SW480 pre:exp_type 'RNA_seq';
-	  			pre:patient_id '123456';
-	  			pre:ced_ega_loc 'EAGXXXXX';
-	  			pre:ced_surfsara_loc pid:1234567;
-	  			pre:file_ced_loc 'EGAXXXXX';
-	  			pre:file_surfsara_loc pid:1234567. 
-	  ced:VCaP  pre:exp_type 'RNA_seq';
-	  			pre:patient_id '123456';
-	  			pre:ced_ega_loc 'EAGXXXXX';
-	  			pre:ced_surfsara_loc pid:1234567;
-	  			pre:file_ced_loc 'EGAXXXXX';
-	  			pre:file_surfsara_loc pid:1234567.  }
+    ced:CACO2 pred:ced_ega_loc "EGA2"^^ega:ced ;
+        pred:ced_surfsara_loc pid:id2 ;
+        pred:exp_type exp:RNA_seq ;
+        pred:file_ega_loc "EGA3"^^ega:file ;
+        pred:file_surfsara_loc pid:id3 ;
+        pred:patient_id patient:id1 .
+
+    ced:HCT116 pred:ced_ega_loc "EGA4"^^ega:ced ;
+        pred:ced_surfsara_loc pid:id4 ;
+        pred:exp_type exp:RNA_seq ;
+        pred:file_ega_loc "EGA5"^^ega:file ;
+        pred:file_surfsara_loc pid:id5 ;
+        pred:patient_id patient:id2 .
+
+    ced:HT29 pred:ced_ega_loc "EGA6"^^ega:ced ;
+        pred:ced_surfsara_loc pid:id6 ;
+        pred:exp_type exp:RNA_seq ;
+        pred:file_ega_loc "EGA7"^^ega:file ;
+        pred:file_surfsara_loc pid:id7 ;
+        pred:patient_id patient:id3 .
+
+    ced:PC346C pred:ced_surfsara_loc pid:id8 ;
+        pred:exp_type exp:RNA_seq ;
+        pred:file_surfsara_loc pid:id9 ;
+        pred:patient_id patient:id4 .
+
+    ced:SW480 pred:ced_ega_loc "EGA8"^^ega:ced ;
+        pred:ced_surfsara_loc pid:id10 ;
+        pred:exp_type exp:RNA_seq ;
+        pred:file_ega_loc "EGA9"^^ega:file ;
+        pred:file_surfsara_loc pid:id11 ;
+        pred:patient_id patient:id5 .
+
+    ced:VCaP pred:ced_ega_loc "EGA10"^^ega:ced ;
+        pred:ced_surfsara_loc pid:id12 ;
+        pred:exp_type exp:RNA_seq ;
+        pred:file_ega_loc "EGA11"^^ega:file ;
+        pred:file_surfsara_loc pid:id13 ;
+        pred:patient_id patient:id6 .
+}
+

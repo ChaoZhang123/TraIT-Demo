@@ -1,0 +1,83 @@
+@prefix ced: <http://www.example.org/ced#> .
+@prefix ega: <http://www.example.org/ega#> .
+@prefix exp: <http://www.example.org/experiment#> .
+@prefix file: <http://www.example.org/file#> .
+@prefix patient: <http://www.example.org/patient#> .
+@prefix pid: <http://epic3.storage.surfsara.nl:8001/846/> .
+@prefix pred: <http://www.example.org/vocabulary#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix study: <http://www.example.org/study#> .
+@prefix type: <http://www.example.org/type#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+_:Nd7bc54550dc04cfbb0e9caeeb652670f {
+    study:cellline_demo pred:has_ced ced:CACO2,
+            ced:HCT116,
+            ced:HT29,
+            ced:PC346C,
+            ced:SW480,
+            ced:VCaP ;
+        pred:loc pid:id1,
+            ega:id1 .
+
+    ced:CACO2 pred:ega_loc ega:id2 ;
+        pred:exp exp:RNA_seq ;
+        pred:file file:id1 ;
+        pred:patient patient:id1 ;
+        pred:surf_loc pid:id2 .
+
+    ced:HCT116 pred:ega_loc ega:id4 ;
+        pred:exp exp:RNA_seq ;
+        pred:file file:id2 ;
+        pred:patient patient:id2 ;
+        pred:surf_loc pid:id4 .
+
+    ced:HT29 pred:ega_loc ega:id6 ;
+        pred:exp exp:RNA_seq ;
+        pred:file file:id3 ;
+        pred:patient patient:id3 ;
+        pred:surf_loc pid:id6 .
+
+    ced:PC346C pred:exp exp:RNA_seq ;
+        pred:file file:id4 ;
+        pred:patient patient:id4 ;
+        pred:surf_loc pid:id8 .
+
+    ced:SW480 pred:ega_loc ega:id8 ;
+        pred:exp exp:RNA_seq ;
+        pred:file file:id5 ;
+        pred:patient patient:id5 ;
+        pred:surf_loc pid:id10 .
+
+    ced:VCaP pred:ega_loc ega:id10 ;
+        pred:exp exp:RNA_seq ;
+        pred:file file:id6 ;
+        pred:patient patient:id6 ;
+        pred:surf_loc pid:id12 .
+
+    file:id1 a type:fastq ;
+        pred:ega_loc ega:id3 ;
+        pred:surf_loc pid:id3 .
+
+    file:id2 a type:fastq ;
+        pred:ega_loc ega:id5 ;
+        pred:surf_loc pid:id5 .
+
+    file:id3 a type:fastq ;
+        pred:ega_loc ega:id7 ;
+        pred:surf_loc pid:id7 .
+
+    file:id4 a type:fastq ;
+        pred:surf_loc pid:id9 .
+
+    file:id5 a type:fastq ;
+        pred:ega_loc ega:id9 ;
+        pred:surf_loc pid:id11 .
+
+    file:id6 a type:bam ;
+        pred:ega_loc ega:id11 ;
+        pred:surf_loc pid:id13 .
+}
+
